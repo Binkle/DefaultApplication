@@ -1,0 +1,24 @@
+# Dependencies
+node_modules/
+
+# Build outputs
+dist/
+*.tsbuildinfo
+
+# Tauri build artifacts
+src-tauri/target/
+target/
+src-tauri/gen/
+
+# OS / tooling junk
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+yarn-error.log
+
+# IDE settings (optional; remove if your team commits them)
+.idea/
+.vscode/

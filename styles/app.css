@@ -1,0 +1,309 @@
+:root {
+  color-scheme: light;
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color: #111827;
+  background-color: #f9fafb;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  color: inherit;
+}
+
+body {
+  margin: 0;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle at top, #eef2ff 0, transparent 65%), #f9fafb;
+}
+
+.app-shell {
+  width: min(960px, 90vw);
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 32px;
+  box-shadow: 0 20px 50px rgba(15, 23, 42, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.app-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.app-title {
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.app-subtitle {
+  margin: 4px 0 0;
+  color: #6b7280;
+}
+
+.permission-card {
+  background: linear-gradient(135deg, #eff6ff 0%, #e0f2fe 68%);
+  border-radius: 18px;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  color: #0f172a;
+}
+
+.permission-card h2 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.permission-card p {
+  margin: 0;
+  color: rgba(15, 23, 42, 0.72);
+}
+
+.button-row {
+  display: flex;
+  gap: 12px;
+}
+
+.button {
+  padding: 10px 18px;
+  border-radius: 12px;
+  border: 1px solid transparent;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.18s ease;
+}
+
+.button-primary {
+  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+  color: white;
+  box-shadow: 0 10px 24px rgba(37, 99, 235, 0.35);
+}
+
+.button-primary:hover {
+  filter: brightness(1.05);
+  box-shadow: 0 14px 30px rgba(37, 99, 235, 0.45);
+}
+
+.button-secondary {
+  background: rgba(255, 255, 255, 0.7);
+  border-color: rgba(59, 130, 246, 0.4);
+  color: #1d4ed8;
+}
+
+.button-secondary:hover {
+  background: rgba(59, 130, 246, 0.12);
+}
+
+.list-card {
+  border: 1px solid #e5e7eb;
+  border-radius: 18px;
+  overflow: hidden;
+}
+.list-toolbar {
+  display: flex;
+  justify-content: flex-start;
+  gap: 8px;
+  padding: 12px 16px;
+  border-bottom: 1px solid #eef2f7;
+  background: #fff;
+}
+.search-input {
+  width: 280px;
+  max-width: 50vw;
+  padding: 8px 12px;
+  border: 1px solid rgba(59, 130, 246, 0.35);
+  border-radius: 10px;
+  font-size: 0.95rem;
+}
+
+.list-header,
+.list-row {
+  display: grid;
+  grid-template-columns: 160px 1fr 140px;
+  align-items: center;
+  gap: 16px;
+}
+
+.list-header {
+  background: #f3f4f6;
+  font-size: 0.85rem;
+  letter-spacing: 0.04em;
+  padding: 14px 24px;
+  text-transform: uppercase;
+  color: #6b7280;
+}
+
+.list-row {
+  padding: 18px 24px;
+  border-top: 1px solid #eef2f7;
+  background: white;
+}
+
+.list-row:nth-child(odd) {
+  background: #fdfdff;
+}
+
+.extension-pill {
+  display: inline-flex;
+  padding: 8px 12px;
+  border-radius: 9999px;
+  background: rgba(59, 130, 246, 0.1);
+  color: #2563eb;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.app-name {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.app-name span:first-child {
+  font-weight: 600;
+  color: #0f172a;
+}
+
+.app-name span:last-child {
+  color: #9ca3af;
+  font-size: 0.85rem;
+  word-break: break-all;
+}
+
+.modify-button {
+  justify-self: flex-end;
+}
+
+.status-indicator {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.9rem;
+  color: #16a34a;
+}
+
+.status-indicator::before {
+  content: '';
+  width: 10px;
+  height: 10px;
+  border-radius: 9999px;
+  background: #16a34a;
+}
+
+.refresh-banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 18px;
+  background: rgba(59, 130, 246, 0.08);
+  color: #1d4ed8;
+  border-radius: 12px;
+  border: 1px solid rgba(37, 99, 235, 0.25);
+}
+
+.refresh-banner button {
+  border: none;
+  background: none;
+  padding: 0;
+  color: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.scroll-top {
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  padding: 10px 14px;
+  border-radius: 9999px;
+  border: 1px solid rgba(37, 99, 235, 0.4);
+  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+  color: #fff;
+  box-shadow: 0 10px 24px rgba(37, 99, 235, 0.35);
+  transition: opacity 0.18s ease-in-out;
+}
+
+.add-extension-form {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.6);
+  padding: 6px 8px;
+  border-radius: 12px;
+}
+
+.add-extension-form input {
+  min-width: 160px;
+  padding: 8px 12px;
+  border-radius: 10px;
+  border: 1px solid rgba(59, 130, 246, 0.35);
+  font-size: 0.95rem;
+  color: #1f2937;
+  background: #fff;
+  outline: none;
+  transition: border-color 0.18s ease, box-shadow 0.18s ease;
+}
+
+.add-extension-form input:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+.add-extension-form button {
+  border: none;
+  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 10px 24px rgba(37, 99, 235, 0.26);
+  transition: filter 0.18s ease, box-shadow 0.18s ease;
+}
+
+.add-extension-form button:hover {
+  filter: brightness(1.05);
+  box-shadow: 0 14px 30px rgba(37, 99, 235, 0.42);
+}
+
+.empty-state {
+  border: 2px dashed rgba(148, 163, 184, 0.5);
+  border-radius: 18px;
+  padding: 48px 32px;
+  text-align: center;
+  color: #6b7280;
+}
+
+@media (max-width: 768px) {
+  .app-shell {
+    padding: 24px;
+    border-radius: 16px;
+  }
+
+  .list-header,
+  .list-row {
+    grid-template-columns: 1fr;
+    align-items: start;
+  }
+
+  .modify-button {
+    justify-self: start;
+  }
+}

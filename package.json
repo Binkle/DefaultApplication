@@ -1,0 +1,28 @@
+{
+  "name": "default-application",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "tauri:dev": "tauri dev",
+    "tauri:build": "tauri build",
+    "prepare:dev": "./scripts/prepare-dev.sh"
+  },
+  "dependencies": {
+    "@tauri-apps/api": "^2.0.0",
+    "@tauri-apps/plugin-dialog": "^2.0.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@tauri-apps/cli": "^2.0.1",
+    "@vitejs/plugin-react": "^4.3.1",
+    "@types/react": "^18.3.4",
+    "@types/react-dom": "^18.3.2",
+    "typescript": "^5.4.5",
+    "vite": "^5.1.0"
+  }
+}
